@@ -1,26 +1,25 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Containerpak/cpak/v2/schema/manifest-v2.json",
-  "manifest_version": "2.0",
+  "$schema": "https://raw.githubusercontent.com/Containerpak/cpak/v2/schema/manifest-v3.json",
+  "manifest_version": "3.0",
   "name": "RetroArch",
   "description": "Run emulators, game engines and media cores.",
   "version": "1.22.2",
-  "image": "ghcr.io/containerpak/retroarch:main",
-  "binaries": ["/usr/bin/retroarch"],
-  "desktop_entries": ["/usr/share/applications/com.libretro.RetroArch.desktop"],
+  "image": "ghcr.io/containerpak/retroarch@sha256:ea980d79420674a207ecffc9ebd633f8f2c90ebcdae1bf7c6acfc55159ab104c",
+  "binaries": [
+    "/usr/bin/retroarch"
+  ],
+  "desktop_entries": [
+    "/usr/share/applications/com.libretro.RetroArch.desktop"
+  ],
   "dependencies": [],
   "addons": [],
   "idle_time": 0,
   "override": {
-    "socketX11": true,
     "socketWayland": true,
     "socketPulseAudio": true,
-    "socketSessionBus": true,
-    "socketSystemBus": false,
     "socketSshAgent": false,
     "socketCups": false,
     "socketGpgAgent": false,
-    "socketAtSpiBus": true,
-    "socketBluetooth": true,
     "deviceDri": true,
     "deviceKvm": false,
     "deviceShm": true,
@@ -33,7 +32,10 @@
     "notification": false,
     "openURI": false,
     "filesystem": [
-      {"path": "home", "access": "read-write"}
+      {
+        "path": "home",
+        "access": "read-write"
+      }
     ],
     "env": [],
     "network": true,
@@ -42,7 +44,6 @@
     "memoryMaxMB": 0,
     "cpuQuota": 0,
     "pidsMax": 0,
-    "asRoot": false,
-    "allowedHostCommands": []
+    "asRoot": false
   }
 }
