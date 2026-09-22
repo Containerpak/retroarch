@@ -4,7 +4,7 @@
   "name": "RetroArch",
   "description": "Run emulators, game engines and media cores.",
   "version": "1.22.2",
-  "image": "ghcr.io/containerpak/retroarch@sha256:b8e5d8a0731fa604af1ba7d2f7f62aa54e42d68d8edb5d151c8820698729ca5b",
+  "image": "ghcr.io/containerpak/retroarch@sha256:21edf53eb8fdc6dba89bdcec81b58122df01272fccf9459054f83d0180dfe2d1",
   "binaries": [
     "/usr/bin/retroarch"
   ],
